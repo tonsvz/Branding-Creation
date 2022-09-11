@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Banner from './components/Banner';
 import Cases from './components/Cases';
 import Header from './components/Header';
-import Test from './components/Test';
 import './styles/App.scss';
 
 const App = () => {
@@ -15,7 +14,6 @@ const App = () => {
       <Header />
       <Banner />
       <Cases />
-      <Test />
     </div>
   );
 };
