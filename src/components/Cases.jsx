@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactComponent as CasesNext } from '../assets/arrow-right.svg';
 import { ReactComponent as CasesPrev } from '../assets/arrow-left.svg';
-
+import '../styles/components/cases.scss';
 const caseStudies = [
   {
     id: 1,
@@ -29,20 +29,18 @@ const Cases = () => {
       <div className='container-fluid'>
         <div className='cases-navigation'>
           <div className='cases-arrow prev disabled'>
-            <CasesPrev className='svg' />
+            <CasesPrev />
           </div>
           <div className='cases-arrow next'>
-            <CasesNext className='svg' />
+            <CasesNext />
           </div>
         </div>
         <div className='row'>
           {caseStudies.map((caseItem) => (
             <div className='case' key={caseItem.id}>
               <div className='case-details'>
-                <span>
-                  {caseItem.subtitle}
-                  <h2>{caseItem.title}</h2>
-                </span>
+                <span>{caseItem.subtitle}</span>
+                <h2>{caseItem.title}</h2>
               </div>
               <div className='case-image'>
                 <img src={`/assets/${caseItem.img}.png`} alt={caseItem.title} />
