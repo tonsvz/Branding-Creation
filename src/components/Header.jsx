@@ -20,7 +20,53 @@ const Header = ({ dimensions }) => {
         duration: 1,
         y: dimensions.width <= 654 ? '70vh' : dimensions.height / 1.85,
         ease: 'expo.inOut',
-      });
+      })
+        .to('.hamburger-menu span', {
+          duration: 0.6,
+          delay: -1,
+          scaleX: 0,
+          transformOrigin: '50% 0%',
+          ease: 'expoInOut',
+        })
+        .to('#Path_1', {
+          duration: 0.4,
+          delay: -6,
+          css: {
+            strokeDashoffset: 10,
+            strokeDasharray: 5,
+          },
+        })
+        .to('#Path_2', {
+          duration: 0.4,
+          delay: -6,
+          css: {
+            strokeDashoffset: 10,
+            strokeDasharray: 20,
+          },
+        })
+        .to('#Line_1', {
+          duration: 0.4,
+          delay: -6,
+          css: {
+            strokeDashoffset: 40,
+            strokeDasharray: 18,
+          },
+        })
+        .to('#circle', {
+          duration: 0.6,
+          delay: -8,
+          css: {
+            strokeDashoffset: 10,
+            strokeDasharray: 5,
+          },
+        })
+        .to('.hamburger-menu-close', {
+          duration: 0.8,
+          delay: -8,
+          css: {
+            display: 'block',
+          },
+        });
     } else {
       // Run close menu animations
     }
